@@ -27,6 +27,16 @@ a {
     text-decoration: none;
 }
 
+nav {
+    margin: 1em;
+    font-size: 150%;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+}
+
 .container {
     width: 100%;
 }
@@ -81,6 +91,29 @@ a {
 .perex {
     font-size: 12pt;
     height: 8em;
+}
+
+.published {
+    font-size: 11pt;
+    color: darkgray;
+}
+
+.container {
+    width: 70em;
+    border: 1px solid gray;
+    background-color: white;
+    margin: 1em auto;
+    padding: 1.5em;
+    box-shadow: 5px 5px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.postbody {
+    margin-top: 1.5em;
+    font-size: 12pt;
 }
 
 

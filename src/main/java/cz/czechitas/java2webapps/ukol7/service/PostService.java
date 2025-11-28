@@ -20,4 +20,8 @@ public class PostService {
   public List<Post> list() {
     return postRepository.findAll();
   }
+
+  public Post singlePost(String slug) {
+    return postRepository.findBySlug(slug);
+  }
 }

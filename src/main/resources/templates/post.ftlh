@@ -3,7 +3,7 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Můj blog</title>
+    <title>Blog - ${post.title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -14,24 +14,14 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 <body>
-    <h1>Blog</h1>
-    [#list postList]
-        <div class="list">
-            [#items as post]
-            <a href="/${post.slug}">
-                <div class="post">
-                    <div class="author">${post.author}</div>
-                    <div class="title">${post.title}</div>
-                    <div class="perex">${post.perex?no_esc}</div>
-                    <div class="published">
-                        [#if post.published??]${post.published?date}[#else]Unknown published date[/#if]
-                    </div>
-                </div>
-            </a>
-            [/#items]
-        </div>
-    [#else]
-        <div class="empty">There are no posts.</div>
-    [/#list]
+    <div class="container">
+        <h1>${post.title}</h1>
+        <div class="author">${post.author}</div>
+        <div class="published">[#if post.published??]${post.published?date}[/#if]</div>
+        <div class="postbody">${post.body?no_esc}</div>
+    </div>
+    <nav>
+        <a href="/">◂ Back to Homepage</a>
+    </nav>
 </body>
 </html>
