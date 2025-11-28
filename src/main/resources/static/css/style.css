@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font: 10pt 'Raleway', sans-serif;
+    color: black;
+    margin: 0;
+    min-height: 100vh;
+    background: white url(../images/background.jpg) center center/cover no-repeat;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1em;
+    font-weight: 600;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2em;
+    width: 100%;
+}
+
+.empty {
+    font-size: 72px;
+    text-align: center;
+    border: 1px solid gray;
+    background-color: white;
+    margin: 10rem auto;
+    padding: 0.5em;
+    box-shadow: 5px 5px 10px black;
+    max-width: 65rem;
+}
+
+.post {
+    width: 36em;
+    height: 18em;
+    border: 1px solid gray;
+    background-color: white;
+    margin: 1em;
+    padding: 1.5em;
+    box-shadow: 5px 5px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.author {
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18pt;
+    text-align: center;
+    margin-bottom: 0.3em;
+}
+
+.perex {
+    font-size: 12pt;
+    height: 8em;
+}
+
+
