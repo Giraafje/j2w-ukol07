@@ -15,7 +15,7 @@
 </head>
 <body>
     <h1>Blog</h1>
-    [#list postList]
+    [#list postList.content]
         <div class="list">
             [#items as post]
             <a href="/${post.slug}">
@@ -33,5 +33,20 @@
     [#else]
         <div class="empty">There are no posts.</div>
     [/#list]
+
+    <div class="pagination">
+        [#if postList.hasPrevious()]
+            <a href="${createURL({"page": postList.number -1})}"><span class="arrow">←</span></a>
+        [/#if]
+
+        [#if postList.hasPrevious() && postList.hasNext()]
+            &nbsp;|&nbsp;
+        [/#if]
+
+        [#if postList.hasNext()]
+            <a href="${createURL({"page": postList.number + 1})}"><span class="arrow">→</span></a>
+        [/#if]
+
+    </div>
 </body>
 </html>
