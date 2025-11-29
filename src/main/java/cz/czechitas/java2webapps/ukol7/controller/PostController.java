@@ -23,10 +23,10 @@ public class PostController {
   @GetMapping("/")
   public ModelAndView list(@PageableDefault Pageable pageable) {
     return new ModelAndView("list")
-        .addObject("postList", postService.list(PageRequest.of(pageable.getPageNumber(), 20)));
+        .addObject("posts", postService.list(PageRequest.of(pageable.getPageNumber(), 20)));
   }
 
-  @GetMapping("/{slug}")
+  @GetMapping("/post/{slug}")
   public ModelAndView showPost(@PathVariable String slug) {
     return new ModelAndView("post").addObject("post", postService.singlePost(slug));
   }

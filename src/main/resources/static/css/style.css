@@ -90,7 +90,7 @@ nav a {
 
 .perex {
     font-size: 12pt;
-    height: 8em;
+    min-height: 8em;
 }
 
 .published {
@@ -126,7 +126,11 @@ nav a {
 .arrow {
     font-size: 30pt;
     color: white;
-    font-weight: 1000;
+    font-weight: bold;
+}
+
+.delimiter {
+    border-bottom: 2px solid darkgray;
 }
 
 
