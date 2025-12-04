@@ -133,4 +133,16 @@ nav a {
     border-bottom: 2px solid darkgray;
 }
 
+.notfound {
+    font-size: 72px;
+    text-align: center;
+    color: red;
+    border: 1px solid gray;
+    background-color: white;
+    margin: 10rem auto;
+    padding: 0.5em;
+    box-shadow: 5px 5px 10px black;
+    max-width: 65rem;
+}
+
 

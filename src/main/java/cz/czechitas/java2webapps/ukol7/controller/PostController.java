@@ -3,6 +3,7 @@ package cz.czechitas.java2webapps.ukol7.controller;
 import cz.czechitas.java2webapps.ukol7.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -28,6 +29,9 @@ public class PostController {
 
   @GetMapping("/post/{slug}")
   public ModelAndView showPost(@PathVariable String slug) {
-    return new ModelAndView("post").addObject("post", postService.singlePost(slug));
+    ModelAndView postModelAndView = new ModelAndView("post");
+    return postService.singlePost(slug)
+        .map(post -> postModelAndView.addObject("post", post))
+        .orElse(new ModelAndView("error", HttpStatus.NOT_FOUND));
   }
 }

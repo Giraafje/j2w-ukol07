@@ -15,6 +15,7 @@ public class Post {
 
   @Length(min=3, max=100)
   @NotBlank
+  @Column(unique = true)
   private String slug;
 
   @Length(min=3, max=100)

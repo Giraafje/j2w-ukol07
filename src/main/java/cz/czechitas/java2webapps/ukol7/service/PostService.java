@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 @Service
 public class PostService {
@@ -26,7 +27,7 @@ public class PostService {
     );
   }
 
-  public Post singlePost(String slug) {
+  public Optional<Post> singlePost(String slug) {
     return postRepository.findBySlug(slug);
   }
 }
